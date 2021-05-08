@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+        <title>List for HW 7 WEB course</title>
+
+</head>
+
+<body>
+
+<div id="data"> here</div>
+<p>First Name : <span id="first_name"></span><br /> Last Name :
+    <span id="last_name"></span></p>
+
+<script>
+      const url= 'https://reqres.in/api/users?page=2'
+
+
+
+      async function getList() {
+          const response = await fetch(url);
+          const data = await response.json();
+    document.getElementById("data").textContent = data;
+
+
+          console.log(data);
+
+
+
+
+
+      }
+
+
+</script>
+
+
+
+<input type="button" onclick="getList()", value="get lists dude">
+
+
+
+
+
+</body>
+</html>
